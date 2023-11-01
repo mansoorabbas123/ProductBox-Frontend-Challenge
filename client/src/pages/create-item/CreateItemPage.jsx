@@ -16,7 +16,6 @@ export function CreateItemPage() {
             imageUrl: (value) => (!value ? 'image url is required' : null)
         },
     });
-    // peer arab ali sha
     return (
         <div className={classes.container}>
             <h2 className={classes.title}>Put Item Up For Sale</h2>

@@ -22,7 +22,7 @@ export function Header() {
             <div className={classes.inner}>
                 <Group>
                     <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
-                    <h2>PRODUCTBOX</h2>
+                    <NavLink to={"/"} style={{ textDecoration: "none", color: "#000" }}><h2>PRODUCTBOX</h2></NavLink>
                 </Group>
                 <Group>
                     <Group ml={50} gap={5} className={classes.links} visibleFrom="sm">

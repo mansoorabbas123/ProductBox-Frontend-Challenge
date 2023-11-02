@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { Container, Paper, Text, Button, Image } from '@mantine/core';
+import React, { useContext } from 'react';
+import { Container, Paper, Text, Button, Image, Flex } from '@mantine/core';
 import { CartContext } from '../../context/cart_context';
 
 
@@ -13,15 +13,17 @@ function CartPage() {
     return (
         <Container size="md" mt='md'>
             <Paper padding="md" shadow="xs" p='md'>
-                <Text size="xl" weight={700} align="center" style={{ marginBottom: 16 }}>
+                <Text size="xl" weight={700} align="center" mb={16} >
                     Shopping Cart
                 </Text>
                 {cart.map((item) => (
-                    <div key={item.id} style={{ display: 'flex', alignItems: 'center', marginBottom: 16 }}>
+                    <Flex key={item.id} mb={16} align={"center"} >
                         <Image
                             src={item.img}
                             alt={item.name}
-                            style={{ width: 80, height: 80, marginRight: 16 }}
+                            miw={80}
+                            mih={80}
+                            mr={16}
                             size={{ xs: '50px', sm: '80px', md: '80px' }}
                         />
                         <div style={{ flex: 1 }}>
@@ -33,21 +35,17 @@ function CartPage() {
                         <Button variant="light" color="red" onClick={() => removeFromCart(item.id)}>
                             Remove
                         </Button>
-                    </div>
+                    </Flex>
                 ))}
                 {cart.length === 0 ? (
-                    <Text size="lg" align="center" style={{ marginTop: 16 }}>
+                    <Text size="lg" align="center" mt={16}>
                         Your cart is empty.
                     </Text>
                 ) : (
                     <>
-                        <div
-                            style={{
-                                display: 'flex',
-                                justifyContent: 'space-between',
-                                alignItems: 'center',
-                                flexDirection: { xs: 'column', sm: 'row' },
-                            }}
+                        <Flex
+                            justify="space-between"
+                            align="center"
                         >
                             <Text size="lg" weight={700}>
                                 Total:
@@ -55,8 +53,8 @@ function CartPage() {
                             <Text size="lg" weight={700}>
                                 ${calculateTotal()}
                             </Text>
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 16 }}>
+                        </Flex>
+                        <Flex justify={"flex-end"} mt={16} >
                             <Button
                                 variant="outline-red"
                                 onClick={clearCart}
@@ -66,12 +64,12 @@ function CartPage() {
                             </Button>
                             <Button
                                 variant="red"
-                                style={{ marginLeft: 16 }}
+                                ml={16}
                                 size={'normal'}
                             >
                                 Checkout
                             </Button>
-                        </div>
+                        </Flex>
                     </>
                 )}
             </Paper>

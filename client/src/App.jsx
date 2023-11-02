@@ -13,11 +13,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="/create-item" element={<CreateItemPage />} />
         <Route path="/cart" element={<CartPage />} />
-        <Route path="/items" element={<ItemsPage />} >
-
-          {/* <Route index element={<PostLists />} />
-        <Route path=":slug" element={<Post />} /> */}
-        </Route>
+        <Route path="/items" element={<ItemsPage />} />
       </Route>
       <Route path="*" element={<h2>not found</h2>} />
     </Routes>

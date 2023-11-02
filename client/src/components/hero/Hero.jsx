@@ -16,14 +16,11 @@ export function Hero() {
                     <Text c="dimmed" mt="md">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt amet, alias quis non odio tempora doloremque? Voluptates, ipsa ea dolores ipsum magnam rerum sequi eveniet dolorem eos ab molestias quo!
                     </Text>
-
-
-
                     <Group mt={30}>
-                        <Button radius="xl" size="md" className={classes.control} onClick={() => navigate('create-item')}>
+                        <Button radius="xl" size="md" className={classes.control} onClick={() => navigate('/create-item')}>
                             Put Items Up For Sale
                         </Button>
-                        <Button variant="default" radius="xl" size="md" className={classes.control}>
+                        <Button variant="default" radius="xl" size="md" className={classes.control} onClick={() => navigate('/items')}>
                             Browser Our Items
                         </Button>
                     </Group>

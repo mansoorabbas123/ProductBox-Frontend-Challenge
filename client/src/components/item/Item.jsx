@@ -32,7 +32,7 @@ export function Item({ item }) {
                 ${item.price}
             </Text>
             {!isAdded ? <Button variant="light" color="blue" fullWidth mt="md" radius="md" onClick={() => addToCart(item)}>
-                Add Item
+                Add To Cart
             </Button> : <Button variant="light" color="red" fullWidth mt="md" radius="md" onClick={() => removeFromCart(item.id)}>
                 Remove Item
             </Button>}

@@ -1,19 +1,18 @@
-import { Autocomplete, Group, Burger, rem } from '@mantine/core';
+import { Autocomplete, Group, Burger, rem, Box, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconSearch } from '@tabler/icons-react';
+import { IconSearch, IconShoppingCart } from '@tabler/icons-react';
 import classes from './Header.module.css';
 import { links } from '../../navlinks.cjs';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 export function Header() {
     const [opened, { toggle }] = useDisclosure(false);
-
+    const navigate = useNavigate();
     const items = links.map((link) => (
         <NavLink to={link.link}
             key={link.label}
             className={classes.link}
         >
-            {console.log(link.link)}
             {link.label}
         </NavLink>
     ));
@@ -29,13 +28,9 @@ export function Header() {
                     <Group ml={50} gap={5} className={classes.links} visibleFrom="sm">
                         {items}
                     </Group>
-                    <Autocomplete
-                        className={classes.search}
-                        placeholder="Search"
-                        leftSection={<IconSearch style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
-                        data={['React', 'Angular', 'Vue', 'Next.js', 'Riot.js', 'Svelte', 'Blitz.js']}
-                        visibleFrom="xs"
-                    />
+                    <Button onClick={() => navigate('/cart')}>
+                        <IconShoppingCart />
+                    </Button>
                 </Group>
             </div>
         </header>

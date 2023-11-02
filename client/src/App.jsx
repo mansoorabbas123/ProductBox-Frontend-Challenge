@@ -3,6 +3,7 @@ import RootLayout from './components/layouts/RootLayout'
 import HomePage from './pages/home/HomePage'
 import { CreateItemPage } from './pages/create-item/CreateItemPage'
 import ItemsPage from './pages/items/ItemsPage'
+import CartPage from './pages/cart/CartPage'
 
 function App() {
 
@@ -11,7 +12,9 @@ function App() {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<HomePage />} />
         <Route path="/create-item" element={<CreateItemPage />} />
+        <Route path="/cart" element={<CartPage />} />
         <Route path="/items" element={<ItemsPage />} >
+
           {/* <Route index element={<PostLists />} />
         <Route path=":slug" element={<Post />} /> */}
         </Route>

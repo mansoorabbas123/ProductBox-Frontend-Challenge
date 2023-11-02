@@ -1,4 +1,4 @@
-import { TextInput, Checkbox, Button, Group, Box, NumberInput, Loader } from '@mantine/core';
+import { TextInput, Button, Group, Box, NumberInput, Loader } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import classes from './CreateItem.module.css';
 import ApiService from '../../services/api.cjs';
@@ -33,6 +33,7 @@ export function CreateItemPage() {
             setLoading(false)
         })
     }
+
     return (
         <div className={classes.container}>
             <h2 className={classes.title}>Put Item Up For Sale</h2>

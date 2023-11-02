@@ -31,21 +31,6 @@ class ApiService {
         });
     };
 
-    put = async (endpoint, data) => {
-        return this.fetchData(endpoint, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        });
-    };
-
-    remove = async (endpoint) => {
-        return this.fetchData(endpoint, {
-            method: 'DELETE',
-        });
-    };
 }
 
 export default ApiService;

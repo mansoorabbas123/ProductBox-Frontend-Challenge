@@ -1,5 +1,4 @@
-import { Image, Container, Title, Button, Group, Text, List, ThemeIcon, rem } from '@mantine/core';
-import { IconCheck } from '@tabler/icons-react';
+import { Image, Container, Title, Button, Group, Text } from '@mantine/core';
 import hero_image from './../../assets/hero_image.svg'
 import classes from './Hero.module.css';
 import { useNavigate } from 'react-router-dom';

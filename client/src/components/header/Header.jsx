@@ -1,9 +1,9 @@
-import { Autocomplete, Group, Burger, rem, Box, Button } from '@mantine/core';
+import { Group, Burger, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconSearch, IconShoppingCart } from '@tabler/icons-react';
+import { IconShoppingCart } from '@tabler/icons-react';
 import classes from './Header.module.css';
 import { links } from '../../navlinks.cjs';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 export function Header() {
     const [opened, { toggle }] = useDisclosure(false);
